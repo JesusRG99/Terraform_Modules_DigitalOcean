@@ -1,4 +1,4 @@
-variable "cluster_name" {
+variable "name" {
   type = string
   description = "Kubernetes Cluster Name"
 }
@@ -7,13 +7,9 @@ variable "region" {
   description = "Kubernetes Cluster Region"
   default = "fra1"
 }
-variable "cluster_version" {
+variable "version" {
   type = string
   description = "Droplet Location"
-}
-variable "node_name" {
-  type = string
-  default = "default-pool"
 }
 variable "node_size" {
   type = string

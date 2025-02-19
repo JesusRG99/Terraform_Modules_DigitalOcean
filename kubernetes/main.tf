@@ -1,10 +1,10 @@
 resource "digitalocean_kubernetes_cluster" "kubernetes_cluster" {
-  name   = var.cluster_name
+  name   = var.name
   region = var.region
-  version = var.cluster_version
+  version = var.version
 
   node_pool {
-    name       = var.node_name
+    name       = "default"
     size       = var.node_size
     node_count = var.node_count
   }
