@@ -1,4 +1,4 @@
-variable "name" {
+variable "cluster_name" {
   type = string
   description = "Kubernetes Cluster Name"
 }
@@ -7,19 +7,19 @@ variable "region" {
   description = "Kubernetes Cluster Region"
   default = "fra1"
 }
-variable "version" {
+variable "cluester_version" {
   type = string
   description = "Droplet Location"
 }
-variable "node_pool" {
-  type = object({
-    name = string
-    size = string
-    node_count = number
-  })
-  default = {
-    default = "default-pool"
-    size = "s-1vcpu-2gb"
-    node_count = 1
-  }
+variable "node_name" {
+  type = string
+  default = "default-pool"
+}
+variable "node_size" {
+  type = string
+  default = "s-1vcpu-2gb"
+}
+variable "node_count" {
+  type = number
+  default = 1
 }
