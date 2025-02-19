@@ -7,7 +7,7 @@ variable "region" {
   description = "Kubernetes Cluster Region"
   default = "fra1"
 }
-variable "version" {
+variable "cluster_version" {
   type = string
   description = "Droplet Location"
 }
